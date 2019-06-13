@@ -3,17 +3,15 @@ const mongoose = require('mongoose');
 const path = require('path');
 const cors = require('cors');
 const app = express();
+require('dotenv/config');
 
 const server = require('http').Server(app);
 
 const io = require('socket.io')(server);
 
-mongoose.connect(
-  'mongodb+srv://instagran-test:insta321@cluster0-gxfgl.mongodb.net/test?retryWrites=true&w=majority',
-  {
-    useNewUrlParser: true
-  }
-);
+mongoose.connect(process.env.URL_MONGO, {
+  useNewUrlParser: true
+});
 
 app.use((req, res, next) => {
   req.io = io;
