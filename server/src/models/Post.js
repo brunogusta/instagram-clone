@@ -5,7 +5,7 @@ const PostSchema = new moongose.Schema(
     author: String,
     place: String,
     description: String,
-    hastag: String,
+    hashtags: String,
     image: String,
     likes: {
       type: Number,
