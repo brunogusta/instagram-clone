@@ -13,8 +13,12 @@ form#new-post {
 form#new-post input {
   margin-bottom: 10px;
 }
+form#new-post input[type='file'] {
+  border: solid 1px #6d34f0;
+  padding: 10px;
+}
 
-form#new-post input[type=text] {
+form#new-post input[type='text'] {
   height: 38px;
   border-radius: 4px;
   border: 1px solid #ddd;
@@ -26,8 +30,8 @@ form#new-post button {
   padding: 10px 20px;
   border-radius: 4px;
   border: 0;
-  background: #7159c1;
-  color: #FFF;
+  background: #6d34f0;
+  color: #fff;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
